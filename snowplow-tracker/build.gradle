@@ -79,16 +79,16 @@ coveralls {
 
 install {
     repositories.mavenInstaller {
-        pom.artifactId = 'snowplow-android-tracker'
+        pom.artifactId = 'tapinfluence-tracker'
         pom.version = "$project.version"
         pom.project {
-            name = 'snowplow-android-tracker'
-            description = 'Snowplow event tracker for Android 14+. Add analytics to your apps and games.'
+            name = 'tapinfluence-tracker'
+            description = 'Tapinfluence event tracker for Android 14+. Add analytics to your apps and games.'
             url = 'https://github.com/snowplow/snowplow-android-tracker'
             inceptionYear = '2014'
 
             packaging = 'aar'
-            groupId = 'com.snowplowanalytics'
+            groupId = 'com.tapinfluence'
 
             licenses {
                 license {
@@ -119,10 +119,10 @@ bintray {
     publish = true
 
     pkg {
-        repo = 'snowplow-maven'
-        name = 'snowplow-android-tracker'
-        group = 'com.snowplowanalytics'
-        userOrg = 'snowplow'
+        repo = 'tapinfluence-tracker'
+        name = 'tapinfluence-tracker'
+        group = 'com.tapinfluence'
+        userOrg = 'tapinfluence'
 
         websiteUrl = 'https://github.com/snowplow/snowplow-android-tracker'
         vcsUrl = 'https://github.com/snowplow/snowplow-android-tracker'
