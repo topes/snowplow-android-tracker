@@ -77,6 +77,12 @@ coveralls {
     jacocoReportPath "$buildDir/reports/coverage/debug/report.xml"
 }
 
+ext {
+    PUBLISH_GROUP_ID = "com.tapinfluence"
+    PUBLISH_ARTIFACT_ID = "tapinfluence-tracker"
+    PUBLISH_VERSION = "$project.version"
+}
+/*
 install {
     repositories.mavenInstaller {
         pom.artifactId = 'tapinfluence-tracker'
@@ -106,10 +112,12 @@ install {
                     name = 'Joshua Beemster'
                 }
             }
+
+
         }
     }
 }
-
+*/
 bintray {
     user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_SNOWPLOW_MAVEN_USER')
     key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_SNOWPLOW_MAVEN_API_KEY')
@@ -133,3 +141,6 @@ bintray {
         version.name = "$project.version"
     }
 }
+
+
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
